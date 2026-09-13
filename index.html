@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sudan Store</title>
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">T+</div><div><b id="storeName">Sudan Store</b><small id="storeDescription">متجرك الإلكتروني</small></div></div>
+  <button class="cart-btn" id="cartButton">🛒 <span>السلة</span><em id="cartCount">0</em></button>
+</header>
+<main>
+  <section class="hero"><div><span class="eyebrow">تسوق بسهولة</span><h1 id="heroTitle">منتجاتك في مكان واحد</h1><p id="heroText">اختر المنتج الذي يعجبك وأرسل طلبك في دقائق.</p></div></section>
+  <section class="section"><div class="section-head"><h2>الأقسام</h2><button id="allCats" class="chip active">الكل</button></div><div id="categories" class="chips"></div></section>
+  <section class="section"><div class="section-head"><h2>المنتجات</h2><span id="productCount" class="muted"></span></div><div id="products" class="grid"></div></section>
+</main>
+<footer><span id="footerName">Sudan Store</span><span>•</span><span>متجر إلكتروني مجاني</span></footer>
+<div id="toast" class="toast"></div>
+<div id="cartDrawer" class="overlay hidden"><div class="drawer"><div class="drawer-head"><h3>سلة المشتريات</h3><button id="closeCart">✕</button></div><div id="cartItems"></div><div class="total-row"><span>الإجمالي</span><b id="cartTotal">0</b></div><button class="primary full" id="checkoutButton">إتمام الطلب</button></div></div>
+<div id="checkoutModal" class="overlay hidden"><div class="modal"><div class="drawer-head"><h3>بيانات الطلب</h3><button id="closeCheckout">✕</button></div><form id="checkoutForm"><input required id="customerName" placeholder="الاسم"><input required id="phone" placeholder="رقم الهاتف"><input id="city" placeholder="المدينة"><input id="address" placeholder="العنوان"><textarea id="notes" placeholder="ملاحظات"></textarea><button class="primary full" type="submit">تأكيد الطلب</button></form></div></div>
+<script src="app.js"></script>
+</body></html>
